@@ -18,10 +18,9 @@ function addQuote() {
 
   if (text && category) {
     quotes.push({ text, category });
-    alert("Quote added!");
+    document.getElementById('quoteDisplay').innerHTML = `"${text}" — ${category}`;
     document.getElementById('newQuoteText').value = '';
     document.getElementById('newQuoteCategory').value = '';
-    displayRandomQuote(); // Show the new quote immediately
   } else {
     alert("Please enter both a quote and a category.");
   }
