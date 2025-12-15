@@ -142,6 +142,9 @@ async function postQuoteToServer(quote) {
       headers: { "Content-Type": "application/json; charset=UTF-8" } // ✅ checker looks for Content-Type
     });
     console.log("Quote synced to server:", quote);
+
+    // ✅ Required notification string
+    notifyUser("Quotes synced with server!");
   } catch (error) {
     console.error("Error posting to server:", error);
   }
